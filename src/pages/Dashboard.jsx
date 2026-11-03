@@ -12,6 +12,7 @@ import { Activity, TrendingUp, Shield, AlertTriangle, ChevronRight } from "lucid
 import { SectionTitle } from "../components/SectionTitle";
 import { CyberCard } from "../components/CyberCard";
 import { StatsCard } from "../components/StatsCard";
+import { RankCard } from "../components/RankCard";
 import { AchievementBadge } from "../components/AchievementBadge";
 import { AnimatedButton } from "../components/AnimatedButton";
 import { useTheme } from "../context/ThemeContext";
@@ -68,6 +69,9 @@ export const Dashboard = () => {
         subtitle="Track your training progress and performance metrics"
         align="left"
       />
+
+      {/* Cyber Defense Rank & Career Progression */}
+      <RankCard />
 
       {/* User stats */}
       <motion.div
@@ -152,7 +156,7 @@ export const Dashboard = () => {
               <p className="text-xs text-slate-500 mb-6 max-w-sm mx-auto">
                 Complete your first Cyber Safety Quiz to visualize your score progression and accuracy trend.
               </p>
-              <AnimatedButton to="/quiz" icon={ChevronRight} variant="secondary">
+              <AnimatedButton to="/cyber-quiz" icon={ChevronRight} variant="secondary">
                 Take a Quiz
               </AnimatedButton>
             </div>
